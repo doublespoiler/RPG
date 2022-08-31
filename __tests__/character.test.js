@@ -5,6 +5,7 @@ describe('Character', () => {
 
   beforeEach(() => {
     character = new Character("Flame-o", "fire");
+    character.setStats([1, 2, 3, 4, 5]);
   });
 
   test('should correctly create a character object', () => {
@@ -13,7 +14,6 @@ describe('Character', () => {
   });
 
   test('should add stats to character object', () => {
-    character.setStats([1, 2, 3, 4, 5]);
     expect(character.statsArray).toEqual([1, 2, 3, 4, 5]);
   });
 });
