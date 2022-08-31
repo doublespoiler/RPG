@@ -7,4 +7,4 @@ describe('Character', () => {
     expect(character.name).toEqual("Flame-o");
     expect(character.type).toEqual("fire");
   });
-})
+});
