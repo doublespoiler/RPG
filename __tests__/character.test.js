@@ -12,11 +12,8 @@ describe('Character', () => {
     expect(character.type).toEqual("fire");
   });
 
-  test('should add experience to character object', () => {
-    character.experience(1, 1, 1, 1);
-    expect(character.experience.attack).toEqual(1);
-    expect(character.experience.defense).toEqual(1);
-    expect(character.experience.speed).toEqual(1);
-    expect(character.experience.accuracy).toEqual(1);
+  test('should add stats to character object', () => {
+    character.setStats([1, 2, 3, 4, 5]);
+    expect(character.statsArray).toEqual([1, 2, 3, 4, 5]);
   });
 });
