@@ -5,6 +5,6 @@ export default class Battle {
   }
 
   attack(attacker, target, type){
-
+    target.currentHp -= 3; //default neutral attack value
   }
 }
