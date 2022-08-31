@@ -26,4 +26,10 @@ describe('Character', () => {
     character.addXp(5);
     expect(character.currentXp).toEqual(5);
   });
+
+  test('should add items one at a time to inventory array of the character', () => {
+    character.addItem("potion");
+    character.addItem("sword");
+    expect(character.inventory).toEqual(["potion","sword"]);
+  });
 });
