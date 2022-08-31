@@ -1,5 +1,5 @@
 export default class Character {
-  constructor(name, type){
+  constructor(name, type) {
     this.name = name;
     this.type = type;
     this.statsArray = []; //this includes stats that will change when we level up: attack, defense, speed, accuracy, maxHp
@@ -19,8 +19,7 @@ export default class Character {
     this.currentXp += toAdd;
   }
   addItem(item) {
-    
+    this.inventory.push(item);
   }
-
 }
 
