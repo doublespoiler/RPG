@@ -3,22 +3,27 @@ import Battle from "../src/js/battle";
 
 describe('Battle', () => {
   let battle;
-  let playerOne;
+  let flameO;
+  let oceana;
+  let dirtmetri;
   let enemyOne;
 
   beforeEach(() => {
-    playerOne = new Character("Rock-y", "earth");
-    playerOne.setStats([5, 5, 5, 5, 10]);
-    playerOne.setHp(playerOne.statsArray[4]);
-    enemyOne = new Character("Lava-Gurl", "fire");
-    enemyOne.setStats([5, 5, 5, 5, 10]);
-    enemyOne.setHp(enemyOne.statsArray[4]);
-    battle = new Battle(playerOne, enemyOne);
+    dirtmetri = new Character("dirtmetri", "earth");
+    dirtmetri.setStats([5, 5, 5, 5, 10]);
+    dirtmetri.setHp(dirtmetri.statsArray[4]);
+    flameO = new Character("flameO", "fire");
+    flameO.setStats([5, 5, 5, 5, 10]);
+    flameO.setHp(flameO.statsArray[4]);
+    oceana = new Character("oceana", "water");
+    oceana.setStats([5, 5, 5, 5, 10]);
+    oceana.setHp(oceana.statsArray[4]);
+    battle = new Battle(dirtmetri, flameO);
   });
 
   test('should correctly create a battle object', () => {
-    expect(battle.player).toEqual(playerOne);
-    expect(battle.enemy).toEqual(enemyOne);
+    expect(battle.player).toEqual(dirtmetri);
+    expect(battle.enemy).toEqual(flameO);
   });
 
   test('should make the enemy lose 3 currentHp', () => {
