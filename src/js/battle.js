@@ -3,4 +3,8 @@ export default class Battle {
     this.player = player;
     this.enemy = enemy;
   }
+
+  attack(attacker, target, type){
+
+  }
 }
