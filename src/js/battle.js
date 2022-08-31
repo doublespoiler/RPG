@@ -14,7 +14,6 @@ export default class Battle {
     } else {
       target.currentHp -= 3; //default neutral attack value
     }
-      
   }
 }
 
