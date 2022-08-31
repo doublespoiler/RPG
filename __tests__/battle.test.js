@@ -22,7 +22,7 @@ describe('Battle', () => {
   });
 
   test('should make the enemy lose 3 currentHp', () => {
-    battle.attack(battle.player, battle.enemy, battle.player.type);
+    battle.attack(battle.player, battle.enemy, "neutral");
     expect(battle.enemy.currentHp).toEqual(7);
   });
 
