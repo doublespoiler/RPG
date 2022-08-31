@@ -6,7 +6,9 @@ export default class Character {
     //track current hp and xp through constructor
   }
   setStats(array) {
- 
+    array.forEach(element => {
+      this.statsArray.push(element);
+    });
   }
 }
 
