@@ -3,4 +3,8 @@ export default class Character {
     this.name = name;
     this.type = type;
   }
+  experience(attack, defense, speed, accuracy) {
+
+  }
 }
+

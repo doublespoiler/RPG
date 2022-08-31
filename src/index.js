@@ -1,5 +1,5 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import RPG from './RPG.js';
+import character from './character.js';
 
