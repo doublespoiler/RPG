@@ -7,9 +7,9 @@ describe('Battle', () => {
   let enemyOne;
 
   beforeEach(() => {
-    battle = new Battle(playerOne, enemyOne);
     playerOne = new Character("Rock-y", "earth");
     enemyOne = new Character("Lava-Gurl", "fire");
+    battle = new Battle(playerOne, enemyOne);
   });
 
   test('should correctly create a battle object', () => {
