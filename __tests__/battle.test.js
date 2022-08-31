@@ -25,4 +25,10 @@ describe('Battle', () => {
     battle.attack(battle.player, battle.enemy, battle.player.type);
     expect(battle.enemy.currentHp).toEqual(7);
   });
+
+  test('should make the enemy lose 1.95 currentHp', () => {
+    battle.attack(battle.player, battle.enemy, battle.player.type);
+    expect(battle.enemy.currentHp).toEqual(8.05);
+  });
+
 });
