@@ -21,4 +21,9 @@ describe('Character', () => {
     character.setHp(character.statsArray[4]);
     expect(character.currentHp).toEqual(character.statsArray[4]);
   });
+
+  test('should add to the currentXp of the character', () => {
+    character.addXp(5);
+    expect(character.currentXp).toEqual(5);
+  });
 });

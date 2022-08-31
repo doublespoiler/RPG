@@ -4,7 +4,7 @@ export default class Character {
     this.type = type;
     this.statsArray = []; //this includes stats that will change when we level up: attack, defense, speed, accuracy, maxHp
     this.currentHp;
-    //track current xp through constructor
+    this.currentXp = 0;
   }
   setStats(array) {
     array.forEach(element => {
@@ -13,6 +13,9 @@ export default class Character {
   }
   setHp(setHpTo) {
     this.currentHp = setHpTo;
+  }
+  addXp(toAdd) {
+
   }
 }
 
