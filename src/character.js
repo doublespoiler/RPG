@@ -15,7 +15,7 @@ export default class Character {
     this.currentHp = setHpTo;
   }
   addXp(toAdd) {
-
+    this.currentXp += toAdd;
   }
 }
 
