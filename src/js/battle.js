@@ -21,6 +21,10 @@ export default class Battle {
       target.currentHp -= 3; //default neutral attack value
     }
   }
+
+  useItem(user, target, item){
+
+  }
 }
 
 //attacker       target         result

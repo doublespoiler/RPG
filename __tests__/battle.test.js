@@ -55,4 +55,10 @@ describe('Battle', () => {
     expect(earthWater.enemy.currentHp).toEqual(4);
   });
 
+  test('should remove an item from the player inventory', () => {
+    battle.player.addItem("potion");
+    battle.player.addItem("other Item");
+    battle.useItem(battle.player, battle.player, "potion");
+    expect(battle.player.inventory).toEqual(["other Item"]);
+  });
 });
