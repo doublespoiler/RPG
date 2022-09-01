@@ -23,6 +23,14 @@ export default class Battle {
   }
 
   useItem(user, target, item){
+    let typeWeakness;
+    if (target.type === "water") {
+      typeWeakness = "earth"; 
+    } else if (target.type === "earth") {
+      typeWeakness = "fire";
+    } else {
+      typeWeakness = "water";
+    }
     switch(item){
       case "potion":
         target.currentHp += 20;
@@ -31,7 +39,7 @@ export default class Battle {
         target.currentHp *= 1.5;
         break;
       case "switch type":
-        //switches target type to enemy type weakness
+        user.type = typeWeakness;
         break;
     }
     const toRemove = user.inventory.indexOf(item);
