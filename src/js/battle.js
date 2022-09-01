@@ -23,6 +23,20 @@ export default class Battle {
   }
 
   useItem(user, target, item){
+    switch(item){
+      case "potion":
+        //heal target 20 hp
+        break;
+      // case "armor":
+      //   //for battle, add maxHp * 1.5
+      //   break;
+      // case "switch type":
+      //   //switches target type to enemy type weakness
+      //   break;
+      // case "poison":
+      //   //for 3 turns, the enemy loses 10% hp
+      //   break;
+    }
     const toRemove = user.inventory.indexOf(item);
     user.inventory.splice(toRemove, 1);
   }

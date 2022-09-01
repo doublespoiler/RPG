@@ -61,4 +61,10 @@ describe('Battle', () => {
     battle.useItem(battle.player, battle.player, "potion");
     expect(battle.player.inventory).toEqual(["other Item"]);
   });
+
+  test('should heal player 20 hp when item:potion is used', () => {
+    battle.player.addItem("potion");
+    battle.useItem(battle.player, battle.player, "potion");
+    expect(battle.player.currentHp).toEqual(30);
+  });
 });
