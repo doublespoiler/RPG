@@ -1,3 +1,24 @@
 body {
   background-color: lightblue;
 }
+
+.container{
+  margin: auto;
+}
+
+#player-div{
+  border:5px solid black;
+  height: 500px;
+  width: 500px;
+}
+
+#enemy-div{
+  border:5px solid green;
+  height: 500px;
+  width: 500px;
+}
+
+
+.hidden{
+  display: none;
+}

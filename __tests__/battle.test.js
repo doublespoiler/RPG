@@ -79,26 +79,27 @@ describe('Battle', () => {
     let rocky = new Character("rocky", "earth");
     rocky.setStats([5,5,5,5,10]);
     rocky.setHp(rocky.statsArray[4]);
-
     let misty = new Character("misty", "water");
     misty.setStats([5,5,5,5,10]);
     misty.setHp(misty.statsArray[4]);
-    
     let waterEarth = new Battle(oceana, rocky);
     let fireWater = new Battle(flameO, misty);
     let earthFire = new Battle(dirtmetri, flameO);
-    
     dirtmetri.addItem("switch type");
     earthFire.useItem(earthFire.player, earthFire.enemy, "switch type");
-    
     oceana.addItem("switch type");
     waterEarth.useItem(waterEarth.player, waterEarth.enemy, "switch type");
-    
     flameO.addItem("switch type");
     fireWater.useItem(fireWater.player, fireWater.enemy, "switch type");
-    
     expect(earthFire.player.type).toEqual("water");
     expect(waterEarth.player.type).toEqual("fire");
     expect(fireWater.player.type).toEqual("earth");
+  });
+
+  test('should reset player stats to default after battle', () => {
+    battle.player.type = "fire";
+    battle.player.currentHp = 4;
+    battle.winFight();
+    expect(battle.player).toEqual(battle.playerDefault);
   });
 });

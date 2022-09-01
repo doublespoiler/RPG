@@ -6,7 +6,7 @@
 <body>
   <div class="container">
     <h3>How I Met Your Monster</h3>
-    <form id="charater-input">
+    <form id="character-input">
       <label for="name">Enter your monster's name:</label>
       <input id="name" type="text">
       <label for="type">Choose a type:</label>
@@ -20,16 +20,16 @@
     <div id="game" class="row">
       <div id="player-div" class="col-md-6">
         <div id="player-title">
-          <p id="player-name-output">Monster Name:</p>
+          <p>Monster Name: <span id="player-name-output"></span></p>
         </div>
-        <div id="player-picture"></div>
+        <div id="player-picture"><img id="player-img" href=""></div>
         <div id="player-info">
           <p>HP: <span id="player-current-hp"></span>/<span id="player-max-hp"></span></p>
           <p>Type: <span id="player-type"></span></p>
-          <p>Strength:<span id="player-strength"></span></p>
-          <p>Defense:<span id="player-defense"></span></p>
-          <p>Accuracy:<span id="player-accuracy"></span></p>
-          <p>Speed:<span id="player-speed"></span></p>
+          <p>Strength: <span id="player-strength"></span></p>
+          <p>Defense: <span id="player-defense"></span></p>
+          <p>Accuracy: <span id="player-accuracy"></span></p>
+          <p>Speed: <span id="player-speed"></span></p>
         </div>
         <div id="player-controls">
           <button type="button" id="ele-btn" class="btn btn-danger">Elemental Attack</button>
@@ -39,7 +39,7 @@
       </div>
       <div id="enemy-div" class="col-md-6">
         <div id="enemy-title">
-          <p id="enemy-name-output">Enemy Monster:</p>
+          <p>Enemy Monster: <span id="enemy-name-output"></span></p>
         </div>
         <div id="enemy-picture"></div>
         <div id="enemy-info">
@@ -54,5 +54,6 @@
       </div>
     </div>
   </div>
-<script src="bundle.js"></script></body>
+<script src="bundle.js"></script>
+</body>
 </html>

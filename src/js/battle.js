@@ -2,9 +2,18 @@ export default class Battle {
   constructor(player, enemy) {
     this.player = player;
     this.enemy = enemy;
+    this.playerType = player.type;
   }
 
   attack(attacker, target, type){
+    //attacker attack
+    //defender defense
+    //critmod
+    //crit multiplier
+    //type advantage
+    //supereffectivesum 
+    //noteffectivesum
+    //sum
     if (type === "earth" && target.type === "fire") {
       target.currentHp -= 1.95;
     } else if (type === "fire" && target.type === "water") {
@@ -44,6 +53,39 @@ export default class Battle {
     }
     const toRemove = user.inventory.indexOf(item);
     user.inventory.splice(toRemove, 1);
+  }
+
+  winFight() {
+    this.player.type = this.playerType;
+    this.player.currentHp = this.player.statsArray[4];
+    //Battle tournamentArc(deku, todoroki)
+      //this.player = deku;
+      //this.enemy  = totoroki;
+      //tournamentArc.winFight
+        //this.player.type
+
+    //Battle Dragonball
+      //this.player = goku;
+      //this.enemy = vegeta;
+      //dragonball.winFight
+        //this.player.type
+
+    //Battle class
+      //this.player = player1;
+      //this.enemy = player2;
+      //Battle.prototype.winFight()
+        //this.player.type
+
+    //add random item to inventory
+    //math.random 1-100
+    //50% potion
+    //35% type switch
+    //15% armor
+    //add xp for defeating enemy
+  }
+
+  loseFight() {
+    //game over?
   }
 }
 
