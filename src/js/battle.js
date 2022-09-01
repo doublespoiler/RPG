@@ -25,7 +25,7 @@ export default class Battle {
   useItem(user, target, item){
     switch(item){
       case "potion":
-        //heal target 20 hp
+        target.currentHp += 20;
         break;
       // case "armor":
       //   //for battle, add maxHp * 1.5
