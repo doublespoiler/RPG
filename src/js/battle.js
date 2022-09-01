@@ -23,7 +23,8 @@ export default class Battle {
   }
 
   useItem(user, target, item){
-
+    const toRemove = user.inventory.indexOf(item);
+    user.inventory.splice(toRemove, 1);
   }
 }
 
