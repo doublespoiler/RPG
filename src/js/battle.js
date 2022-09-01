@@ -30,12 +30,9 @@ export default class Battle {
       case "armor":
         target.currentHp *= 1.5;
         break;
-      // case "switch type":
-      //   //switches target type to enemy type weakness
-      //   break;
-      // case "poison":
-      //   //for 3 turns, the enemy loses 10% hp
-      //   break;
+      case "switch type":
+        //switches target type to enemy type weakness
+        break;
     }
     const toRemove = user.inventory.indexOf(item);
     user.inventory.splice(toRemove, 1);

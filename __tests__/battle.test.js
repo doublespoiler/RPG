@@ -73,4 +73,10 @@ describe('Battle', () => {
     battle.useItem(battle.player, battle.player, "armor");
     expect(battle.player.currentHp).toEqual(15);
   });
+
+  test('should change player type to enemy weakness when item:switch type is used', () => {
+    dirtmetri.addItem("switch type");
+    battle.useItem(battle.player, battle.enemy, "switch type");
+    expect(dirtmetri.type).toEqual("fire");
+  });
 });
