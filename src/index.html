@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Shape Tracker</title>
+  <title>HIMYM</title>
 </head>
 <body>
-  <h3>Enter three lengths to determine if they can make a triangle.</h3>
-  <form id="triangle-checker-form">
-    <label for="length1">Enter a number:</label>
-    <input id="length1" type="number">
-    <label for="length2">Enter a number:</label>
-    <input id="length2" type="number">
-    <label for="length3">Enter a number:</label>
-    <input id="length3" type="number">
-    <button type="submit">Submit</button>
-  </form>
-  <div id="response"></div>
-</body>
+  <div class="container">
+    <h3>How I Met Your Monster</h3>
+    <form id="charater-input">
+      <label for="name">Enter your monster's name:</label>
+      <input id="name" type="text">
+      <label for="type">Choose a type:</label>
+      <select id="type">
+        <option value="fire">Fire</option>
+        <option value="water">Water</option>
+        <option value="earth">Earth</option> 
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="game" class="row">
+      <div id="player-div" class="col-md-6">
+        <div id="player-title">
+          <p id="player-name-output">Monster Name:</p>
+        </div>
+        <div id="player-picture"></div>
+        <div id="player-info">
+          <p>HP: <span id="player-current-hp"></span>/<span id="player-max-hp"></span></p>
+          <p>Type: <span id="player-type"></span></p>
+          <p>Strength:<span id="player-strength"></span></p>
+          <p>Defense:<span id="player-defense"></span></p>
+          <p>Accuracy:<span id="player-accuracy"></span></p>
+          <p>Speed:<span id="player-speed"></span></p>
+        </div>
+        <div id="player-controls">
+          <button type="button" id="ele-btn" class="btn btn-danger">Elemental Attack</button>
+          <button type="button" id="neutral-btn" class="btn btn-dark">Neutral Attack</button>
+          <button type="button" id="item-btn" class="btn btn-warning">Use Item</button>
+        </div>
+      </div>
+      <div id="enemy-div" class="col-md-6">
+        <div id="enemy-title">
+          <p id="enemy-name-output">Enemy Monster:</p>
+        </div>
+        <div id="enemy-picture"></div>
+        <div id="enemy-info">
+          <p>HP: <span id="enemy-current-hp"></span></p>
+          <p>Type: <span id="enemy-type"></span></p>
+        </div>
+        <div id="shop-controls" class="hidden">          
+          <button type="button" id="buy-btn">Buy</button>
+          <button type="button" id="sell-btn">Sell</button>
+          <button type="button" id="leave-btn">Leave</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="bundle.js"></script></body>
 </html>
