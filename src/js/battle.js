@@ -27,9 +27,9 @@ export default class Battle {
       case "potion":
         target.currentHp += 20;
         break;
-      // case "armor":
-      //   //for battle, add maxHp * 1.5
-      //   break;
+      case "armor":
+      //heal 50% health
+        break;
       // case "switch type":
       //   //switches target type to enemy type weakness
       //   break;

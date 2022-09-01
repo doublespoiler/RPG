@@ -67,4 +67,10 @@ describe('Battle', () => {
     battle.useItem(battle.player, battle.player, "potion");
     expect(battle.player.currentHp).toEqual(30);
   });
+
+  test('should multiply user currentHp by 1.5 when item:armor is used', () => {
+    battle.player.addItem("armor");
+    battle.useItem(battle.player, battle.player, "armor");
+    expect(battle.player.currentHp).toEqual(15);
+  });
 });
