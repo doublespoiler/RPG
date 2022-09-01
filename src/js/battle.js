@@ -28,7 +28,7 @@ export default class Battle {
         target.currentHp += 20;
         break;
       case "armor":
-      //heal 50% health
+        target.currentHp *= 1.5;
         break;
       // case "switch type":
       //   //switches target type to enemy type weakness
