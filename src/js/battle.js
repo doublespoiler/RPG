@@ -11,6 +11,12 @@ export default class Battle {
       target.currentHp -= 1.95;
     } else if (type === "water" && target.type === "earth") {
       target.currentHp -= 1.95;
+    } else if (type === "fire" && target.type === "earth") {
+      target.currentHp -= 6;
+    } else if (type === "water" && target.type === "fire") {
+      target.currentHp -= 6; 
+    } else if (type === "earth" && target.type === "water") {
+      target.currentHp -= 6;  
     } else {
       target.currentHp -= 3; //default neutral attack value
     }
