@@ -18,7 +18,7 @@ describe('Battle', () => {
     oceana = new Character("oceana", "water");
     oceana.setStats([5, 5, 5, 5, 10]);
     oceana.setHp(oceana.statsArray[4]);
-    battle = new Battle(dirtmetri, flameO); //
+    battle = new Battle(dirtmetri, flameO);
   });
 
   test('should correctly create a battle object', () => {
@@ -42,4 +42,17 @@ describe('Battle', () => {
     expect(fireWater.enemy.currentHp).toEqual(8.05);
     expect(waterEarth.enemy.currentHp).toEqual(8.05);
   });
+
+  test('should make the enemy lose 6 currentHp if the attacker has type advantage', () => {
+    let fireEarth = new Battle(flameO, dirtmetri);
+    fireEarth.attack(fireEarth.player, fireEarth.enemy, fireEarth.player.type);
+    let waterFire = new Battle(oceana, flameO);
+    waterFire.attack(waterFire.player, waterFire.enemy, waterFire.player.type);
+    let earthWater = new Battle(dirtmetri, oceana);
+    earthWater.attack(earthWater.player, earthWater.enemy, earthWater.player.type);
+    expect(fireEarth.enemy.currentHp).toEqual(4);
+    expect(waterFire.enemy.currentHp).toEqual(4);
+    expect(earthWater.enemy.currentHp).toEqual(4);
+  });
+
 });
