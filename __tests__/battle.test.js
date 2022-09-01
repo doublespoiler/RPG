@@ -24,6 +24,7 @@ describe('Battle', () => {
   test('should correctly create a battle object', () => {
     expect(battle.player).toEqual(dirtmetri);
     expect(battle.enemy).toEqual(flameO);
+    expect(battle.playerDefault).toEqual(dirtmetri);
   });
 
   test('should make the enemy lose 3 currentHp', () => {
